@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D&M - Clientes</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link rel="icon" type="image/png" href="media/dym_ico.ico" />
+
+    <script defer src="scripts.js"></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "es",
+            includedLanguages: "en,es",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false,
+          },
+          "google_translate_element",
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="media/logo-dym.png" alt="Logo D&M" />
+        </a>
+      </div>
+
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <nav class="navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <!-- <li><a href="servicios.html">Servicios</a></li> -->
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Productos</a>
+            <ul class="dropdown-content">
+              <li>
+                <a href="https://qplusnube2.co/" target="_blank">QPLUS</a>
+              </li>
+              <li><a href="glopem.html">Operación Marítima</a></li>
+            </ul>
+          </li>
+          <li><a href="equipo.html">Nosotros</a></li>
+          <li><a href="clientes.html">Clientes</a></li>
+          <li><a href="index.html#escribenos">Contacto</a></li>
+          <!-- <li class="language-item">
+            <div class="lang-circle" id="lang-switcher">
+              <img
+                id="flag-icon"
+                src="https://flagcdn.com/w40/gb.png"
+                alt="Cambiar Idioma"
+              />
+              <div
+                id="google_translate_element"
+                style="
+                  position: absolute;
+                  opacity: 0;
+                  pointer-events: none;
+                  width: 1px;
+                  height: 1px;
+                  overflow: hidden;
+                "
+              ></div>
+            </div>
+          </li> -->
+        </ul>
+      </nav>
+
+      <div class="franja-fina">
+        <div class="f-color c1"></div>
+        <div class="f-color c2"></div>
+        <div class="f-color c3"></div>
+        <div class="f-color c4"></div>
+      </div>
+    </header>
+    <section class="hero-clientes-bg">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Nuestros Clientes</h1>
+            <p>
+              Empresas que confían en nuestras soluciones para optimizar sus
+              procesos y alcanzar la excelencia.
+            </p>
+            <!-- <div class="hero-badge">Casos de Éxito</div> -->
+          </div>
+          <div class="hero-icon-box">
+            <i class="fas fa-handshake"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Secccion junta de titulo y cards -->
+    <section class="clientes-grid-section">
+      <div class="clientes-intro">
+        <h2>Aliados Estratégicos</h2>
+        <p>
+          En D&M Software Solutions, nos enorgullece contar con la confianza de
+          empresas líderes. Nuestra experiencia se traduce en soluciones
+          robustas que impulsan la competitividad de nuestros clientes.
+        </p>
+      </div>
+
+      <hr class="separator-line" />
+
+      <div class="clientes-container">
+        <!-- CARD COMFANDI -->
+        <div class="card-cliente">
+          <div class="card-front">
+            <img
+              src="media/Logo_empresas/logo_Comfandi3.jpg"
+              alt="Logo Cliente"
+              class="card-logo"
+            />
+          </div>
+
+          <div class="card-back">
+            <h2 class="card-title-cliente">Comfandi</h2>
+            <p>Suite completa Valoración del desempeño del producto QPLUS.</p>
+            <a
+              href="https://comfandi.qplusnube2.co/"
+              target="_blank"
+              class="btn-cliente"
+              >Ir a Qplus</a
+            >
+          </div>
+        </div>
+        <!-- CARD PROTECNICA -->
+        <div class="card-cliente">
+          <div class="card-front">
+            <img
+              src="media/Logo_empresas/logo_Protecnica.png"
+              alt="Logo Cliente"
+              class="card-logo"
+            />
+          </div>
+
+          <div class="card-back">
+            <h2 class="card-title-cliente">Protécnica Ingenería</h2>
+            <p>Producto QPLUS Completo - Plataforma Multiempresa.</p>
+            <a
+              href="https://protecnica.qplusnube2.co/"
+              target="_blank"
+              class="btn-cliente"
+              >Ir a Qplus</a
+            >
+          </div>
+        </div>
+        <!-- CARD SOS -->
+        <div class="card-cliente">
+          <div class="card-front">
+            <img
+              src="media/Logo_empresas/logo_SOS.png"
+              alt="Logo Cliente"
+              class="card-logo"
+            />
+          </div>
+
+          <div class="card-back">
+            <h2 class="card-title-cliente">SOS</h2>
+            <p>Suite completa Valoración del desempeño del producto QPLUS.</p>
+            <a
+              href="https://aplicacionescompetencias.sos.com.co:8095/Default.aspx"
+              target="_blank"
+              class="btn-cliente"
+              >Ir a Qplus</a
+            >
+          </div>
+        </div>
+        <!-- CARD SUCHANCE -->
+        <div class="card-cliente">
+          <div class="card-front">
+            <img
+              src="media/Logo_empresas/logo_Suchance1.png"
+              alt="Logo Cliente"
+              class="card-logo"
+            />
+          </div>
+
+          <div class="card-back">
+            <h2 class="card-title-cliente">Suchance</h2>
+            <p>Producto QPLUS Completo - Plataforma Multiempresa.</p>
+            <a href="https://qplus.com.co/" target="_blank" class="btn-cliente"
+              >Ir a Qplus</a
+            >
+          </div>
+        </div>
+        <!-- CARD NUTRESOL -->
+        <div class="card-cliente">
+          <div class="card-front">
+            <img
+              src="media/Logo_empresas/logonutresol.png"
+              alt="Logo Cliente"
+              class="card-logo"
+            />
+          </div>
+
+          <div class="card-back">
+            <h2 class="card-title-cliente">Nutresol</h2>
+            <p>Producto QPLUS Completo - Plataforma Multiempresa.</p>
+            <a
+              href="https://protecnica.qplusnube2.co/"
+              target="_blank"
+              class="btn-cliente"
+              >Ir a Qplus</a
+            >
+          </div>
+        </div>
+        <!-- CARD GANA GANA (SEAPTO) -->
+        <div class="card-cliente">
+          <div class="card-front">
+            <img
+              src="media/Logo_empresas/logo_gangana.png"
+              alt="Logo Cliente"
+              class="card-logo"
+            />
+          </div>
+
+          <div class="card-back">
+            <h2 class="card-title-cliente">GanaGana</h2>
+            <p>Producto QPLUS Completo - Plataforma Multiempresa.</p>
+            <a href="https://qplus.com.co/" target="_blank" class="btn-cliente"
+              >Ir a Qplus</a
+            >
+          </div>
+        </div>
+        <!-- CARD REDITOS -->
+        <div class="card-cliente">
+          <div class="card-front">
+            <img
+              src="media/Logo_empresas/logoreditos.png"
+              alt="Logo Cliente"
+              class="card-logo"
+            />
+          </div>
+
+          <div class="card-back">
+            <h2 class="card-title-cliente">Reditos</h2>
+            <p>Suite completa Sistemas de Gestión del producto QPLUS.</p>
+            <a
+              href="https://reditos.qplusnube2.co/"
+              target="_blank"
+              class="btn-cliente"
+              >Ir a Qplus</a
+            >
+          </div>
+        </div>
+        <!-- CARD QUIMICA LIDER -->
+        <div class="card-cliente">
+          <div class="card-front">
+            <img
+              src="media/Logo_empresas/LogoQuimicaLider.png"
+              alt="Logo Cliente"
+              class="card-logo"
+            />
+          </div>
+
+          <div class="card-back">
+            <h2 class="card-title-cliente">Química Lider</h2>
+            <p>Producto QPLUS Completo - Plataforma Multiempresa.</p>
+            <a
+              href="https://protecnica.qplusnube2.co/"
+              target="_blank"
+              class="btn-cliente"
+              >Ir a Qplus</a
+            >
+          </div>
+        </div>
+        <!-- CARD PRODUTECNICA -->
+        <div class="card-cliente">
+          <div class="card-front">
+            <img
+              src="media/Logo_empresas/logoproductecnica.png"
+              alt="Logo Cliente"
+              class="card-logo"
+            />
+          </div>
+
+          <div class="card-back">
+            <h2 class="card-title-cliente">Produtecnica</h2>
+            <p>Producto QPLUS Completo</p>
+            <a
+              href="https://qplus.produtecnicasa.com/Default.aspx"
+              target="_blank"
+              class="btn-cliente"
+              >Ir a Qplus</a
+            >
+          </div>
+        </div>
+        <!-- CARD RIOPAILA -->
+        <div class="card-cliente">
+          <div class="card-front">
+            <img
+              src="media/Logo_empresas/riocas.png"
+              alt="Logo Cliente"
+              class="card-logo"
+            />
+          </div>
+
+          <div class="card-back">
+            <h2 class="card-title-cliente">Riopaila - Castilla</h2>
+            <p>
+              PQRS, Planes de Acción y Control Interno del producto ISOftware
+            </p>
+            <a
+              href="https://pqrsisoftware.riopaila-castilla.com/login.aspx"
+              target="_blank"
+              class="btn-cliente"
+              >Ir a ISOftware</a
+            >
+          </div>
+        </div>
+        <!-- CARD ESCALA -->
+        <div class="card-cliente">
+          <div class="card-front">
+            <img
+              src="media/Logo_empresas/escala.png"
+              alt="Logo Cliente"
+              class="card-logo"
+            />
+          </div>
+
+          <div class="card-back">
+            <h2 class="card-title-cliente">Escala</h2>
+            <p>
+              Solución especializada en la Gestión Logística de la Operación
+              Marítima.
+            </p>
+            <a
+              href="https://escala.qplusnube2.co/"
+              target="_blank"
+              class="btn-cliente"
+              >Ir a Plataforma</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="pie-pagina">
+      <div class="grupo-2">
+        <small
+          >&copy; 2015 <b>D&M Software Solutions SAS</b> - Todos los derechos
+          Reservados.</small
+        >
+      </div>
+    </footer>
+  </body>
+</html>

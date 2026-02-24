@@ -1,0 +1,808 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D&M Software Solutions</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link rel="icon" type="image/png" href="media/dym_ico.ico" />
+
+    <script defer src="scripts.js"></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "es",
+            includedLanguages: "en,es",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false,
+          },
+          "google_translate_element",
+        );
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="media/logo-dym.png" alt="Logo D&M" />
+        </a>
+      </div>
+
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <nav class="navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <!-- <li><a href="servicios.html">Servicios</a></li> -->
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Productos</a>
+            <ul class="dropdown-content">
+              <li>
+                <a href="https://qplusnube2.co/" target="_blank">QPLUS</a>
+              </li>
+              <li><a href="glopem.html">Operación Marítima</a></li>
+            </ul>
+          </li>
+          <li><a href="equipo.html">Nosotros</a></li>
+          <li><a href="clientes.html">Clientes</a></li>
+          <li>
+            <a href="#contacto" onclick="showSection('contacto')">Contacto</a>
+          </li>
+          <!-- <li class="language-item">
+            <div class="lang-circle" id="lang-switcher">
+              <img
+                id="flag-icon"
+                src="https://flagcdn.com/w40/gb.png"
+                alt="Cambiar Idioma"
+              />
+              <div
+                id="google_translate_element"
+                style="
+                  position: absolute;
+                  opacity: 0;
+                  pointer-events: none;
+                  width: 1px;
+                  height: 1px;
+                  overflow: hidden;
+                "
+              ></div>
+            </div>
+          </li> -->
+        </ul>
+      </nav>
+
+      <div class="franja-fina">
+        <div class="f-color c1"></div>
+        <div class="f-color c2"></div>
+        <div class="f-color c3"></div>
+        <div class="f-color c4"></div>
+      </div>
+    </header>
+    <!-- Carrusel Inicial -->
+    <main class="main-fluid">
+      <div class="carousel-container">
+        <div class="slide fade">
+          <img
+            src="media/Banner_carrusel_1/img-slider-1.jpg"
+            alt="Banner Qplus 1"
+          />
+        </div>
+        <div class="slide fade">
+          <img
+            src="media/Banner_carrusel_1/img-slider-2.jpg"
+            alt="Banner Qplus 2"
+          />
+        </div>
+        <div class="slide fade">
+          <img
+            src="media/Banner_carrusel_1/img-slider-3.jpg"
+            alt="Banner Qplus 3"
+          />
+        </div>
+
+        <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+        <a class="next" onclick="moveSlide(1)">&#10095;</a>
+
+        <div class="dots-container">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+    </main>
+    <!-- Sección Que hacemos -->
+    <section class="info-section">
+      <div class="info-container">
+        <div class="info-image">
+          <img src="media/productos.png" alt="Equipo D&M" />
+        </div>
+
+        <div class="info-text">
+          <h2>Innovación en Soluciones de Software</h2>
+          <p>
+            En <strong>D&M Software Solutions</strong>, nos especializamos en el
+            desarrollo de herramientas tecnológicas diseñadas para optimizar la
+            gestión empresarial. Nuestro objetivo es brindar soluciones robustas
+            que permitan a las organizaciones alcanzar la excelencia operativa.
+          </p>
+          <p>
+            Contamos con una amplia trayectoria implementando sistemas de
+            gestión integrados que se adaptan a las necesidades específicas de
+            cada cliente. Desde la automatización de procesos hasta el
+            cumplimiento de normativas internacionales, nuestro software es tu
+            mejor aliado.
+          </p>
+          <p>
+            Nuestro compromiso es la mejora continua y el soporte constante,
+            asegurando que tu inversión tecnológica crezca junto con tu empresa
+            en un mercado cada vez más digital y exigente.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Sección Ventajas D&M -->
+    <section class="features-section">
+      <div class="features-container">
+        <div class="features-text">
+          <h2>Proveemos soluciones integrales para su negocio</h2>
+          <ul class="check-list">
+            <li>Profesionales con más de 20 años de experiencia</li>
+            <li>Productos con plataforma amigable y dinámica</li>
+            <li>Manejo de datos seguro y sin riesgos controlados</li>
+            <li>Respaldo continuo en el soporte a los usuarios</li>
+            <li>Consultores certificados con experiencia</li>
+          </ul>
+        </div>
+        <!-- Imagen Ventajas -->
+        <div class="features-image">
+          <img src="media/Img-casuales/imagen_3.jpg" alt="Ventajas D&M" />
+        </div>
+      </div>
+    </section>
+    <!-- Sección Productos -->
+    <section class="products-section">
+      <div class="products-header">
+        <h2>Nuestros Productos</h2>
+      </div>
+
+      <div class="products-container">
+        <div class="product-card">
+          <div class="card-top">
+            <div class="product-logo">
+              <img src="media/QplusLogin.png" alt="Logo Qplus" />
+            </div>
+          </div>
+
+          <div class="card-bottom">
+            <h3>Qplus: Mucho más que Calidad</h3>
+            <ul class="product-list">
+              <li>Sistemas de Gestión</li>
+              <li>Gestión Valoración del Desempeño</li>
+              <li>Gestión Talento Humano</li>
+            </ul>
+            <!-- <a href="#" class="btn-product">Conocer Qplus</a> -->
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="card-top">
+            <div class="product-logo">
+              <img
+                src="media/GLOPEM/glopem_horizontal.png"
+                alt="D&M Solutions"
+              />
+            </div>
+          </div>
+
+          <div class="card-bottom">
+            <h3>Gestión Logística de Operaciones Maritimas</h3>
+            <ul class="product-list">
+              <li>Manejo de importaciones de contenedores por mandato</li>
+              <li>Liquidación de Importaciones</li>
+            </ul>
+            <!-- <a href="#" class="btn-product">Ver Soluciones</a> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Carrusel Empresas que confiaron en D&M -->
+    <section class="empresas-section">
+      <h2>Empresas que han confiado en nosotros</h2>
+      <div class="carrusel-empresas">
+        <div class="empresas-track">
+          <div class="empresa-logo">
+            <img src="media/Logo_empresas/asocana.png" alt="Empresa 1" />
+          </div>
+          <div class="empresa-logo">
+            <img src="media/Logo_empresas/johnson.png" alt="Empresa 2" />
+          </div>
+          <div class="empresa-logo">
+            <img src="media/Logo_empresas/logo_gangana.png" alt="Empresa 3" />
+          </div>
+          <div class="empresa-logo">
+            <img src="media/Logo_empresas/logo_Comfandi3.jpg" alt="Empresa 4" />
+          </div>
+          <div class="empresa-logo">
+            <img
+              src="media/Logo_empresas/logo_Protecnica.png"
+              alt="Empresa 5"
+            />
+          </div>
+          <div class="empresa-logo">
+            <img src="media/Logo_empresas/riocas.png" alt="Empresa 6" />
+          </div>
+          <div class="empresa-logo">
+            <img src="media/Logo_empresas/logoreditos.png" alt="Empresa 7" />
+          </div>
+          <div class="empresa-logo">
+            <img
+              src="media/Logo_empresas/LogoQuimicaLider.png"
+              alt="Empresa 8"
+            />
+          </div>
+          <div class="empresa-logo">
+            <img
+              src="media/Logo_empresas/logoproductecnica.png"
+              alt="Empresa 9"
+            />
+          </div>
+          <div class="empresa-logo">
+            <img src="media/Logo_empresas/logonutresol.png" alt="Empresa 10" />
+          </div>
+          <div class="empresa-logo">
+            <img
+              src="media/Logo_empresas/logo_Suchance1.png"
+              alt="Empresa 11"
+            />
+          </div>
+          <div class="empresa-logo">
+            <img src="media/Logo_empresas/logo_SOS.png" alt="Empresa 12" />
+          </div>
+          <div class="empresa-logo">
+            <img
+              src="media/Logo_empresas/cl-logo-fenalco.svg"
+              alt="Empresa 13"
+            />
+          </div>
+          <div class="empresa-logo">
+            <img
+              src="media/Logo_empresas/FreeZoneService.png"
+              alt="Empresa 14"
+            />
+          </div>
+          <div class="empresa-logo">
+            <img src="media/Logo_empresas/PortService.png" alt="Empresa 15" />
+          </div>
+          <div class="empresa-logo">
+            <img
+              src="media/Logo_empresas/TransportService.png"
+              alt="Empresa 16"
+            />
+          </div>
+          <div class="empresa-logo">
+            <img src="media/Logo_empresas/escala.png" alt="Empresa 17" />
+          </div>
+          <div class="empresa-logo">
+            <img
+              src="media/Logo_empresas/bancooccidente.png"
+              alt="Empresa 18"
+            />
+          </div>
+
+          <div class="empresa-logo">
+            <img src="media/Logo_empresas/asocana.png" alt="Empresa 1" />
+          </div>
+          <div class="empresa-logo">
+            <img src="media/Logo_empresas/johnson.png" alt="Empresa 2" />
+          </div>
+          <div class="empresa-logo">
+            <img src="media/Logo_empresas/logo_gangana.png" alt="Empresa 3" />
+          </div>
+          <div class="empresa-logo">
+            <img src="media/Logo_empresas/logo_Comfandi3.jpg" alt="Empresa 4" />
+          </div>
+          <div class="empresa-logo">
+            <img
+              src="media/Logo_empresas/logo_Protecnica.png"
+              alt="Empresa 5"
+            />
+          </div>
+          <div class="empresa-logo">
+            <img src="media/Logo_empresas/riocas.png" alt="Empresa 6" />
+          </div>
+          <div class="empresa-logo">
+            <img src="media/Logo_empresas/logoreditos.png" alt="Empresa 7" />
+          </div>
+          <div class="empresa-logo">
+            <img
+              src="media/Logo_empresas/LogoQuimicaLider.png"
+              alt="Empresa 8"
+            />
+          </div>
+          <div class="empresa-logo">
+            <img
+              src="media/Logo_empresas/logoproductecnica.png"
+              alt="Empresa 9"
+            />
+          </div>
+          <div class="empresa-logo">
+            <img src="media/Logo_empresas/logonutresol.png" alt="Empresa 10" />
+          </div>
+          <div class="empresa-logo">
+            <img
+              src="media/Logo_empresas/logo_Suchance1.png"
+              alt="Empresa 11"
+            />
+          </div>
+          <div class="empresa-logo">
+            <img src="media/Logo_empresas/logo_SOS.png" alt="Empresa 12" />
+          </div>
+          <div class="empresa-logo">
+            <img
+              src="media/Logo_empresas/cl-logo-fenalco.svg"
+              alt="Empresa 13"
+            />
+          </div>
+          <div class="empresa-logo">
+            <img
+              src="media/Logo_empresas/FreeZoneService.png"
+              alt="Empresa 14"
+            />
+          </div>
+          <div class="empresa-logo">
+            <img src="media/Logo_empresas/PortService.png" alt="Empresa 15" />
+          </div>
+          <div class="empresa-logo">
+            <img
+              src="media/Logo_empresas/TransportService.png"
+              alt="Empresa 16"
+            />
+          </div>
+          <div class="empresa-logo">
+            <img src="media/Logo_empresas/escala.png" alt="Empresa 17" />
+          </div>
+          <div class="empresa-logo">
+            <img
+              src="media/Logo_empresas/bancooccidente.png"
+              alt="Empresa 18"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contactenos -->
+    <div id="contacto" class="contacto-section">
+      <h2>¡Contáctenos!</h2>
+      <div class="contacto-container">
+        <div class="contacto-info">
+          <p>
+            Estamos listos para potenciar tu empresa con nuestras soluciones
+            tecnológicas.
+          </p>
+
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3>Correo Electrónico</h3>
+              <p>info@dymsites.co</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <i class="fab fa-whatsapp icon-whatsapp"></i>
+            <div>
+              <h3>WhatsApp</h3>
+              <p>+57 315 299 0225</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="image-container">
+              <img
+                src="media/logo_d&M_contacto.png"
+                alt="Imagen sobre D&M"
+                style="width: 80%; border-radius: 10px"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="contacto-form">
+          <form
+            id="contactForm"
+            action="https://formspree.io/f/mvggyelj"
+            method="POST"
+          >
+            <div class="input-group">
+              <input
+                type="text"
+                name="name"
+                placeholder="Nombre Completo"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <input
+                type="text"
+                name="empresa"
+                placeholder="Empresa"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <input
+                type="text"
+                name="cargo"
+                placeholder="Cargo en la Empresa"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <input
+                type="email"
+                name="email"
+                placeholder="Correo Electrónico"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <textarea
+                name="message"
+                placeholder="¿Cómo podemos ayudarte?"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+            <p id="responseMessage" style="display: none"></p>
+          </form>
+          <div
+            id="mensaje-exito"
+            style="
+              display: none;
+              color: #a6bb53;
+              margin-top: 15px;
+              font-weight: bold;
+              text-align: center;
+            "
+          >
+            <i class="fas fa-check-circle"></i> ¡Mensaje enviado con éxito! Nos
+            contactaremos pronto.
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="pie-pagina">
+      <div class="grupo-1">
+        <div class="box">
+          <figure>
+            <a href="#">
+              <img src="media/logo-dym.png" alt="Logo D&M" />
+            </a>
+          </figure>
+        </div>
+
+        <div class="box">
+          <p>
+            <a
+              href="media/Condiciones del uso del software QPLUS NUBE como servicio.pdf"
+              target="_blank"
+              class="footer-link"
+            >
+              Condiciones del uso del software <b>QPLUS NUBE</b> como servicio
+            </a>
+          </p>
+          <p>
+            <a href="javascript:void(0)" id="openDataPolicy" class="footer-link"
+              >Política de Tratamiento de Datos</a
+            >
+          </p>
+          <p>
+            <a
+              href="javascript:void(0)"
+              id="openPrivacyNotice"
+              class="footer-link"
+              >Aviso de Privacidad</a
+            >
+          </p>
+        </div>
+
+        <div class="box">
+          <h3>SÍGUENOS</h3>
+          <div class="red-social">
+            <a
+              href="https://www.linkedin.com/company/d-m-software-solutions-s-a-s/posts/?feedView=all"
+              target="_blank"
+              title="LinkedIn"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://wa.me/3152990225"
+              target="_blank"
+              title="Contactar por WhatsApp"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="grupo-2">
+        <small
+          >&copy; 2015 <b>D&M Software Solutions SAS</b> - Todos los derechos
+          Reservados.</small
+        >
+      </div>
+    </footer>
+
+    <div id="modalDataPolicy" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" id="closeData">&times;</span>
+        <div class="modal-body legal-content">
+          <header class="legal-header">
+            <i class="fas fa-file-shield"></i>
+            <h2>
+              <strong
+                >POLÍTICA DE TRATAMIENTO DE DATOS PERSONALES DE D&M SOFTWARE
+                SOLUTIONS S.A.S</strong
+              >
+            </h2>
+            <p class="vigencia">Vigencia: desde el 31 de enero de 2022</p>
+          </header>
+
+          <section class="legal-section">
+            <h5><i class="fas fa-info-circle"></i> GENERALIDADES</h5>
+            <p>
+              El presente documento establece las Políticas de Tratamiento de
+              Datos Personales de
+              <strong>D&M Software Solutions S.A.S.</strong>, sociedad
+              legalmente constituida, con domicilio principal en la ciudad de
+              Cali, quien en adelante se denominará
+              <strong>LA COMPAÑÍA</strong>.
+            </p>
+            <p>
+              En cumplimiento de la Ley 1581 de 2012 y el Decreto 1377 de 2013,
+              garantizamos el manejo adecuado de los datos recolectados para
+              permitir a los titulares el ejercicio del derecho de
+              <em>Habeas Data</em>.
+            </p>
+          </section>
+
+          <div class="legal-card">
+            <h5><i class="fas fa-building"></i> RESPONSABLE</h5>
+            <p>
+              <strong>LA COMPAÑÍA</strong> con domicilio para notificaciones en
+              la carrera 54 No.1A-60 apto 703D, de la ciudad de Cali.
+            </p>
+          </div>
+
+          <section class="legal-section">
+            <h5><i class="fas fa-book"></i> DEFINICIONES CLAVE</h5>
+            <dl class="legal-definitions">
+              <dt>Autorización</dt>
+              <dd>
+                Consentimiento previo, expreso e informado del Titular para el
+                Tratamiento de datos.
+              </dd>
+
+              <dt>Dato Personal</dt>
+              <dd>
+                Cualquier información vinculada o que pueda asociarse a personas
+                naturales determinadas.
+              </dd>
+
+              <dt>Tratamiento</dt>
+              <dd>
+                Operaciones como recolección, almacenamiento, uso o supresión de
+                datos.
+              </dd>
+            </dl>
+          </section>
+
+          <section class="legal-section">
+            <h5><i class="fas fa-gavel"></i> PRINCIPIOS APLICABLES</h5>
+            <ul class="principles-grid">
+              <li>
+                <strong>Legalidad:</strong> Sujeto a lo establecido en la ley.
+              </li>
+              <li>
+                <strong>Finalidad:</strong> Obedece a un objetivo legítimo e
+                informado.
+              </li>
+              <li>
+                <strong>Libertad:</strong> Solo con consentimiento previo y
+                expreso.
+              </li>
+              <li>
+                <strong>Veracidad:</strong> Información exacta, completa y
+                actualizada.
+              </li>
+              <li>
+                <strong>Seguridad:</strong> Medidas técnicas para evitar
+                adulteración o pérdida.
+              </li>
+            </ul>
+          </section>
+
+          <section class="legal-section">
+            <h5><i class="fas fa-user-check"></i> DERECHOS DE LOS TITULARES</h5>
+            <div class="rights-list">
+              <p>
+                <i class="fas fa-check"></i> Conocer, actualizar y rectificar
+                sus datos personales.
+              </p>
+              <p>
+                <i class="fas fa-check"></i> Solicitar prueba de la autorización
+                otorgada.
+              </p>
+              <p>
+                <i class="fas fa-check"></i> Ser informado respecto al uso dado
+                a sus datos.
+              </p>
+              <p>
+                <i class="fas fa-check"></i> Revocar la autorización o solicitar
+                la supresión.
+              </p>
+            </div>
+          </section>
+
+          <section class="legal-section contact-box">
+            <h5><i class="fas fa-headset"></i> CANALES DE CONTACTO</h5>
+            <p>Para peticiones, quejas o reclamos (PQR), comuníquese a:</p>
+            <ul>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <strong>Email:</strong> info@dymsites.co
+              </li>
+              <li>
+                <i class="fas fa-phone"></i> <strong>Teléfono:</strong> 602
+                3451870
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Carrera 54 No.1A-60 Apto
+                703D, Cali.
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div id="modalPrivacyNotice" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" id="closePrivacy">&times;</span>
+        <h2>Aviso de Privacidad</h2>
+        <div class="modal-body legal-content">
+          <header class="legal-header">
+            <i class="fas fa-user-shield"></i>
+            <h4>AVISO DE PRIVACIDAD Y TÉRMINOS DE USO</h4>
+            <p class="intro-text">
+              Plataforma tecnológica de
+              <strong>D&M Software Solutions S.A.S.</strong>
+            </p>
+          </header>
+
+          <div class="legal-card highlight">
+            <p>
+              El sitio <strong>dymsites.co</strong> es una plataforma diseñada
+              para facilitar el acceso a nuestros servicios y productos. Al
+              utilizar este sitio, usted acepta los siguientes términos y
+              condiciones, los cuales recomendamos leer detalladamente.
+            </p>
+          </div>
+
+          <section class="legal-section">
+            <h5><i class="fas fa-copy"></i> SOBRE EL CONTENIDO</h5>
+            <p>
+              La información contenida en este sitio es de carácter netamente
+              <strong>informativo</strong>. LA COMPAÑÍA no se hace responsable
+              por:
+            </p>
+            <ul class="principles-list">
+              <li>
+                <i class="fas fa-exclamation-triangle"></i> Mala interpretación
+                o uso inadecuado de la información.
+              </li>
+              <li>
+                <i class="fas fa-link"></i> Contenidos en documentos o sitios
+                web enlazados de terceros.
+              </li>
+              <li>
+                <i class="fas fa-microchip"></i> Problemas técnicos,
+                inexactitudes u omisiones del contenido.
+              </li>
+            </ul>
+            <p>
+              Es obligación del usuario verificar la información antes de su
+              utilización.
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h5><i class="fas fa-laptop-code"></i> SEGURIDAD Y SERVICIO</h5>
+            <div class="legal-card">
+              <p>
+                <i class="fas fa-virus-slash"></i>
+                <strong>Protección:</strong> El usuario debe tomar sus propias
+                medidas para evitar agentes nocivos o virus. No somos
+                responsables de daños en software o hardware derivados de
+                descargas o alteraciones en el sistema.
+              </p>
+            </div>
+            <p>LA COMPAÑÍA se reserva el derecho de:</p>
+            <div class="rights-list">
+              <p>
+                <i class="fas fa-ban"></i> Negar el registro de cualquier
+                persona por razones justificadas.
+              </p>
+              <p>
+                <i class="fas fa-edit"></i> Remover contenidos que no se adecúen
+                a estos términos.
+              </p>
+              <p>
+                <i class="fas fa-clock"></i> Mantener la información publicada
+                por el tiempo que considere necesario.
+              </p>
+            </div>
+          </section>
+
+          <section class="legal-section">
+            <h5><i class="fas fa-copyright"></i> DERECHOS DE PROPIEDAD</h5>
+            <div class="legal-card" style="border-left-color: #004a99">
+              <p>
+                Textos, sonidos, software, videos y fotografías están protegidos
+                por las leyes de <strong>propiedad intelectual</strong>. Queda
+                prohibida su reproducción parcial o total con fines comerciales
+                sin autorización escrita.
+              </p>
+            </div>
+          </section>
+
+          <section class="legal-section technical-box">
+            <h5><i class="fas fa-desktop"></i> SUGERENCIAS DE NAVEGACIÓN</h5>
+            <p>
+              <i class="fas fa-expand"></i>
+              <strong>Resolución mínima:</strong> 1024 x 768 píxeles.
+            </p>
+            <p>
+              <i class="fas fa-browser"></i> <strong>Navegador:</strong> Se
+              sugiere utilizar la última versión disponible.
+            </p>
+          </section>
+
+          <section class="legal-section contact-highlight">
+            <h5><i class="fas fa-balance-scale"></i> LEY APLICABLE</h5>
+            <p>
+              Estos términos se rigen por las leyes de la
+              <strong>República de Colombia</strong>. Cualquier controversia se
+              someterá a dicha jurisdicción.
+            </p>
+          </section>
+
+          <footer class="legal-footer">
+            <p>Última actualización: <strong>31 de enero de 2022</strong></p>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!-- Fin Footer -->
+  </body>
+</html>
