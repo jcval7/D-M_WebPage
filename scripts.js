@@ -96,53 +96,33 @@ function gestionarTraductor() {
 window.addEventListener("load", gestionarTraductor);
 
 // ---------------- Carrusel Empresas que confiaron ---------------------//
-//  Pausar carrusel de empresas al pasar el mouse
-const track = document.querySelector(".empresas-track");
+document.addEventListener("DOMContentLoaded", function () {
+  function shuffleAndFillMarquee(containerId) {
+    const marquee = document.getElementById(containerId);
+    if (!marquee) return;
 
-if (track) {
-  track.addEventListener("mouseenter", () => {
-    track.style.animationPlayState = "paused";
-  });
+    // 1. Obtener los logos originales escritos en el HTML
+    let logos = Array.from(marquee.children);
 
-  track.addEventListener("mouseleave", () => {
-    track.style.animationPlayState = "running";
-  });
-}
+    // 2. Mezclar el orden para que siempre sea distinto (Fisher-Yates)
+    for (let i = logos.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [logos[i], logos[j]] = [logos[j], logos[i]];
+    }
 
-/* --- FUNCIÓN PARA INTERCALAR LOGOS (ORDEN ALEATORIO) --- */
-function mezclarEmpresas() {
-  const track = document.querySelector(".empresas-track");
-  if (!track) return;
+    // 3. Limpiar el contenedor y poner los logos mezclados
+    marquee.innerHTML = "";
+    logos.forEach((logo) => marquee.appendChild(logo));
 
-  // Convertimos los logos en un array para poder mezclarlos
-  const logos = Array.from(track.querySelectorAll(".empresa-logo"));
-
-  // Solo mezclamos la primera mitad (los originales)
-  // ya que la segunda mitad debe ser una copia exacta para el efecto infinito
-  const mitadOriginal = logos.slice(0, logos.length / 2);
-
-  // Algoritmo de mezcla (Fisher-Yates)
-  for (let i = mitadOriginal.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [mitadOriginal[i], mitadOriginal[j]] = [mitadOriginal[j], mitadOriginal[i]];
+    // 4. TRUCO FINAL: Triplicar el contenido
+    // Al triplicar, garantizamos que siempre haya logos visibles por la derecha
+    const content = marquee.innerHTML;
+    marquee.innerHTML = content + content + content;
   }
 
-  // Limpiamos el track
-  track.innerHTML = "";
-
-  // Volvemos a insertar los logos mezclados
-  mitadOriginal.forEach((logo) => {
-    track.appendChild(logo.cloneNode(true));
-  });
-
-  // Duplicamos nuevamente para mantener el bucle infinito sin saltos
-  mitadOriginal.forEach((logo) => {
-    track.appendChild(logo.cloneNode(true));
-  });
-}
-
-// Ejecutar cuando el DOM esté listo
-document.addEventListener("DOMContentLoaded", mezclarEmpresas);
+  // Llamamos a la función con el ID de tu contenedor
+  shuffleAndFillMarquee("marquee-content");
+});
 
 //------------ FORMULARIO CONTACTANOS ----------------------//
 const form = document.getElementById("contactForm");
