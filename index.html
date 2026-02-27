@@ -52,7 +52,7 @@
           <li><a href="index.html">Inicio</a></li>
           <!-- <li><a href="servicios.html">Servicios</a></li> -->
           <li class="dropdown">
-            <a href="#" class="dropbtn">Productos</a>
+            <a href="#producto" class="dropbtn">Productos</a>
             <ul class="dropdown-content">
               <li>
                 <a href="https://qplusnube2.co/" target="_blank">QPLUS</a>
@@ -95,314 +95,342 @@
         <div class="f-color c4"></div>
       </div>
     </header>
-    <!-- Carrusel Inicial -->
-    <main class="main-fluid">
-      <div class="carousel-container">
-        <div class="slide fade">
-          <img
-            src="media/Banner_carrusel_1/img-slider-1.jpg"
-            alt="Banner Qplus 1"
-          />
-        </div>
-        <div class="slide fade">
-          <img
-            src="media/Banner_carrusel_1/img-slider-2.jpg"
-            alt="Banner Qplus 2"
-          />
-        </div>
-        <div class="slide fade">
-          <img
-            src="media/Banner_carrusel_1/img-slider-3.jpg"
-            alt="Banner Qplus 3"
-          />
-        </div>
+    <main class="wrapper-principal">
+      <!-- Carrusel Inicial -->
+      <main class="main-fluid">
+        <div class="carousel-container">
+          <div class="slide fade">
+            <img src="media/Banner_carrusel_1/3.png" alt="Banner Qplus 1" />
+          </div>
+          <div class="slide fade">
+            <img src="media/Banner_carrusel_1/1.png" alt="Banner Qplus 2" />
+          </div>
+          <div class="slide fade">
+            <img src="media/Banner_carrusel_1/4.png" alt="Banner Qplus 3" />
+          </div>
+          <div class="slide fade">
+            <img src="media/Banner_carrusel_1/2.png" alt="Banner Qplus 4" />
+          </div>
 
-        <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
-        <a class="next" onclick="moveSlide(1)">&#10095;</a>
+          <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+          <a class="next" onclick="moveSlide(1)">&#10095;</a>
 
-        <div class="dots-container">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
+          <div class="dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+          </div>
+        </div>
+      </main>
+      <!-- Sección Que hacemos -->
+      <section class="seccion-inicio-proceso">
+        <h2>Innovación en Soluciones de Software</h2>
+        <div class="separator-line"></div>
+
+        <div class="wrapper-principal">
+          <div class="grid-layout-caracteristicas">
+            <div class="img-content-caracteristicas">
+              <div class="video-container-suite">
+                <img
+                  src="media/productos.png"
+                  alt="Productos D&M"
+                  style="width: 100%; display: block; border-radius: 8px"
+                />
+              </div>
+            </div>
+
+            <div class="text-content-caracteristicas">
+              <p class="introduccion-suite">
+                En <strong>D&M Software Solutions</strong>, nos especializamos
+                en el desarrollo de herramientas tecnológicas diseñadas para
+                optimizar la gestión empresarial y alcanzar la excelencia
+                operativa.
+              </p>
+
+              <div class="feature-item">
+                <i class="fas fa-check-circle"></i>
+                <p>
+                  Implementación de sistemas de gestión integrados que se
+                  adaptan a las necesidades específicas de cada organización.
+                </p>
+              </div>
+
+              <div class="feature-item">
+                <i class="fas fa-check-circle"></i>
+                <p>
+                  Automatización de procesos y cumplimiento de normativas
+                  internacionales para fortalecer su competitividad.
+                </p>
+              </div>
+
+              <div class="feature-item">
+                <i class="fas fa-check-circle"></i>
+                <p>
+                  Compromiso con la mejora continua y soporte constante para
+                  asegurar que su inversión tecnológica crezca con su empresa.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Sección Ventajas D&M -->
+      <section class="features-section">
+        <h2>Proveemos soluciones integrales para su negocio</h2>
+        <div class="separator-line"></div>
+        <div class="features-container">
+          <div class="features-text">
+            <ul class="check-list">
+              <li>Profesionales con más de 20 años de experiencia</li>
+              <li>Productos con plataforma amigable y dinámica</li>
+              <li>Manejo de datos seguro y sin riesgos controlados</li>
+              <li>Respaldo continuo en el soporte a los usuarios</li>
+              <li>Consultores certificados con experiencia</li>
+            </ul>
+          </div>
+          <!-- Imagen Ventajas -->
+          <div class="features-image">
+            <img src="media/Img-casuales/imagen_3.jpg" alt="Ventajas D&M" />
+          </div>
+        </div>
+      </section>
+      <!-- Sección Productos -->
+      <section class="products-section" id="producto">
+        <div class="products-header">
+          <h2>Nuestros Productos</h2>
+        </div>
+        <div class="separator-line"></div>
+        <div class="products-container">
+          <div class="product-card">
+            <div class="card-top">
+              <div class="product-logo">
+                <img src="media/QplusLogin.png" alt="Logo Qplus" />
+              </div>
+            </div>
+
+            <div class="card-bottom">
+              <h3>Qplus: Mucho más que Calidad</h3>
+              <ul class="product-list">
+                <li>Sistemas de Gestión</li>
+                <li>Gestión Valoración del Desempeño</li>
+                <li>Gestión Talento Humano</li>
+              </ul>
+              <!-- <a href="#" class="btn-product">Conocer Qplus</a> -->
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="card-top">
+              <div class="product-logo">
+                <img
+                  src="media/GLOPEM/glopem_horizontal.png"
+                  alt="D&M Solutions"
+                />
+              </div>
+            </div>
+
+            <div class="card-bottom">
+              <h3>Gestión Logística de Operaciones Maritimas</h3>
+              <ul class="product-list">
+                <li>Manejo de importaciones de contenedores por mandato</li>
+                <li>Liquidación de Importaciones</li>
+              </ul>
+              <!-- <a href="#" class="btn-product">Ver Soluciones</a> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Carrusel Empresas que confiaron en D&M -->
+      <section class="seccion-principal" id="nuestros-clientes">
+        <h2>Empresas que confiaron en Nosotros</h2>
+        <div class="separator-line"></div>
+        <div class="carousel-marquee">
+          <div class="marquee-content" id="marquee-content">
+            <div class="logo-item">
+              <img
+                src="media/Logo_empresas/logo_Protecnica.png"
+                alt="Protecnica"
+              />
+            </div>
+            <div class="logo-item">
+              <img
+                src="media/Logo_empresas/PortService.png"
+                alt="PorService"
+              />
+            </div>
+            <div class="logo-item">
+              <img
+                src="media/Logo_empresas/LogoQuimicaLider.png"
+                alt="Quimica Lider"
+              />
+            </div>
+            <div class="logo-item">
+              <img
+                src="media/Logo_empresas/riocas.png"
+                alt="RioPaila"
+              />
+            </div>
+            <div class="logo-item">
+              <img src="media/Logo_empresas/logonutresol.png" alt="Nutresol" />
+            </div>
+            <div class="logo-item">
+              <img
+                src="media/Logo_empresas/logo_Comfandi3.jpg"
+                alt="Comfandi"
+              />
+            </div>
+            <div class="logo-item">
+              <img src="media/Logo_empresas/logo_SOS.png" alt="SOS" />
+            </div>
+            <div class="logo-item">
+              <img src="media/Logo_empresas/johnson.png" alt="Jonson" />
+            </div>
+            <div class="logo-item">
+              <img src="media/Logo_empresas/logo_gangana.png" alt="Seapto" />
+            </div>
+            <div class="logo-item">
+              <img
+                src="media/Logo_empresas/logo_Suchance1.png"
+                alt="Suchance"
+              />
+            </div>
+            <div class="logo-item">
+              <img
+                src="media/Logo_empresas/TransportService.png"
+                alt="TransporService"
+              />
+            </div>
+            <div class="logo-item">
+              <img
+                src="media/Logo_empresas/logoreditos.png"
+                alt="Grupo Reditos"
+              />
+            </div>
+            <div class="logo-item">
+              <img
+                src="media/Logo_empresas/logoproductecnica.png"
+                alt="Productecnica"
+              />
+            </div>
+            <div class="logo-item">
+              <img
+                src="media/Logo_empresas/asocana.png"
+                alt="Asocaña"
+              />
+            </div>
+            <div class="logo-item">
+              <img
+                src="media/Logo_empresas/FreeZoneService.png"
+                alt="FreeZoneService"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contactenos -->
+      <div id="contacto" class="contacto-section">
+        <h2>¡Contáctenos!</h2>
+        <div class="separator-line"></div>
+        <div class="contacto-container">
+          <div class="contacto-info">
+            <p>
+              Estamos listos para potenciar tu empresa con nuestras soluciones
+              tecnológicas.
+            </p>
+
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h3>Correo Electrónico</h3>
+                <p>info@dymsites.co</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <i class="fab fa-whatsapp icon-whatsapp"></i>
+              <div>
+                <h3>WhatsApp</h3>
+                <p>+57 315 299 0225</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="image-container">
+                <img
+                  src="media/logo_d&M_contacto.png"
+                  alt="Imagen sobre D&M"
+                  style="width: 80%; border-radius: 10px"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="contacto-form">
+            <form
+              id="contactForm"
+              action="https://formspree.io/f/mvggyelj"
+              method="POST"
+            >
+              <div class="input-group">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Nombre Completo"
+                  required
+                />
+              </div>
+              <div class="input-group">
+                <input
+                  type="text"
+                  name="empresa"
+                  placeholder="Empresa"
+                  required
+                />
+              </div>
+              <div class="input-group">
+                <input
+                  type="text"
+                  name="cargo"
+                  placeholder="Cargo en la Empresa"
+                  required
+                />
+              </div>
+              <div class="input-group">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Correo Electrónico"
+                  required
+                />
+              </div>
+              <div class="input-group">
+                <textarea
+                  name="message"
+                  placeholder="¿Cómo podemos ayudarte?"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+              <p id="responseMessage" style="display: none"></p>
+            </form>
+            <div
+              id="mensaje-exito"
+              style="
+                display: none;
+                color: #a6bb53;
+                margin-top: 15px;
+                font-weight: bold;
+                text-align: center;
+              "
+            >
+              <i class="fas fa-check-circle"></i> ¡Mensaje enviado con éxito!
+              Nos contactaremos pronto.
+            </div>
+          </div>
         </div>
       </div>
     </main>
-    <!-- Sección Que hacemos -->
-    <section class="info-section">
-      <div class="info-container">
-        <div class="info-image">
-          <img src="media/productos.png" alt="Equipo D&M" />
-        </div>
-
-        <div class="info-text">
-          <h2>Innovación en Soluciones de Software</h2>
-          <p>
-            En <strong>D&M Software Solutions</strong>, nos especializamos en el
-            desarrollo de herramientas tecnológicas diseñadas para optimizar la
-            gestión empresarial. Nuestro objetivo es brindar soluciones robustas
-            que permitan a las organizaciones alcanzar la excelencia operativa.
-          </p>
-          <p>
-            Contamos con una amplia trayectoria implementando sistemas de
-            gestión integrados que se adaptan a las necesidades específicas de
-            cada cliente. Desde la automatización de procesos hasta el
-            cumplimiento de normativas internacionales, nuestro software es tu
-            mejor aliado.
-          </p>
-          <p>
-            Nuestro compromiso es la mejora continua y el soporte constante,
-            asegurando que tu inversión tecnológica crezca junto con tu empresa
-            en un mercado cada vez más digital y exigente.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- Sección Ventajas D&M -->
-    <section class="features-section">
-      <div class="features-container">
-        <div class="features-text">
-          <h2>Proveemos soluciones integrales para su negocio</h2>
-          <ul class="check-list">
-            <li>Profesionales con más de 20 años de experiencia</li>
-            <li>Productos con plataforma amigable y dinámica</li>
-            <li>Manejo de datos seguro y sin riesgos controlados</li>
-            <li>Respaldo continuo en el soporte a los usuarios</li>
-            <li>Consultores certificados con experiencia</li>
-          </ul>
-        </div>
-        <!-- Imagen Ventajas -->
-        <div class="features-image">
-          <img src="media/Img-casuales/imagen_3.jpg" alt="Ventajas D&M" />
-        </div>
-      </div>
-    </section>
-    <!-- Sección Productos -->
-    <section class="products-section">
-      <div class="products-header">
-        <h2>Nuestros Productos</h2>
-      </div>
-
-      <div class="products-container">
-        <div class="product-card">
-          <div class="card-top">
-            <div class="product-logo">
-              <img src="media/QplusLogin.png" alt="Logo Qplus" />
-            </div>
-          </div>
-
-          <div class="card-bottom">
-            <h3>Qplus: Mucho más que Calidad</h3>
-            <ul class="product-list">
-              <li>Sistemas de Gestión</li>
-              <li>Gestión Valoración del Desempeño</li>
-              <li>Gestión Talento Humano</li>
-            </ul>
-            <!-- <a href="#" class="btn-product">Conocer Qplus</a> -->
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="card-top">
-            <div class="product-logo">
-              <img
-                src="media/GLOPEM/glopem_horizontal.png"
-                alt="D&M Solutions"
-              />
-            </div>
-          </div>
-
-          <div class="card-bottom">
-            <h3>Gestión Logística de Operaciones Maritimas</h3>
-            <ul class="product-list">
-              <li>Manejo de importaciones de contenedores por mandato</li>
-              <li>Liquidación de Importaciones</li>
-            </ul>
-            <!-- <a href="#" class="btn-product">Ver Soluciones</a> -->
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Carrusel Empresas que confiaron en D&M -->
-    <section class="carousel-marquee">
-      <div class="wrapper-principal">
-        <div class="carousel-header">
-          <h2>Empresas que han confiado en nosotros</h2>
-        </div>
-        <div class="marquee-content" id="marquee-content">
-          <div class="logo-item">
-            <img src="media/Logo_empresas/asocana.png" alt="Asocaña" />
-          </div>
-          <div class="logo-item">
-            <img src="media/Logo_empresas/johnson.png" alt="Johnson" />
-          </div>
-          <div class="logo-item">
-            <img src="media/Logo_empresas/logo_gangana.png" alt="Gangan" />
-          </div>
-          <div class="logo-item">
-            <img src="media/Logo_empresas/logo_Comfandi3.jpg" alt="Comfandi" />
-          </div>
-          <div class="logo-item">
-            <img
-              src="media/Logo_empresas/logo_Protecnica.png"
-              alt="Protecnica"
-            />
-          </div>
-          <div class="logo-item">
-            <img src="media/Logo_empresas/riocas.png" alt="Riocas" />
-          </div>
-          <div class="logo-item">
-            <img src="media/Logo_empresas/logoreditos.png" alt="Reditos" />
-          </div>
-          <div class="logo-item">
-            <img
-              src="media/Logo_empresas/LogoQuimicaLider.png"
-              alt="Química Líder"
-            />
-          </div>
-          <div class="logo-item">
-            <img
-              src="media/Logo_empresas/logoproductecnica.png"
-              alt="Productecnica"
-            />
-          </div>
-          <div class="logo-item">
-            <img src="media/Logo_empresas/logonutresol.png" alt="Nutresol" />
-          </div>
-          <div class="logo-item">
-            <img src="media/Logo_empresas/logo_Suchance1.png" alt="Suchance" />
-          </div>
-          <div class="logo-item">
-            <img src="media/Logo_empresas/logo_SOS.png" alt="SOS" />
-          </div>
-          <div class="logo-item">
-            <img src="media/Logo_empresas/cl-logo-fenalco.svg" alt="Fenalco" />
-          </div>
-          <div class="logo-item">
-            <img src="media/Logo_empresas/FreeZoneService.png" alt="FreeZone" />
-          </div>
-          <div class="logo-item">
-            <img src="media/Logo_empresas/PortService.png" alt="PortService" />
-          </div>
-          <div class="logo-item">
-            <img
-              src="media/Logo_empresas/TransportService.png"
-              alt="TransportService"
-            />
-          </div>
-          <div class="logo-item">
-            <img src="media/Logo_empresas/escala.png" alt="Escala" />
-          </div>
-          <div class="logo-item">
-            <img
-              src="media/Logo_empresas/bancooccidente.png"
-              alt="Banco Occidente"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contactenos -->
-    <div id="contacto" class="contacto-section">
-      <h2>¡Contáctenos!</h2>
-      <div class="contacto-container">
-        <div class="contacto-info">
-          <p>
-            Estamos listos para potenciar tu empresa con nuestras soluciones
-            tecnológicas.
-          </p>
-
-          <div class="info-item">
-            <i class="fas fa-envelope"></i>
-            <div>
-              <h3>Correo Electrónico</h3>
-              <p>info@dymsites.co</p>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <i class="fab fa-whatsapp icon-whatsapp"></i>
-            <div>
-              <h3>WhatsApp</h3>
-              <p>+57 315 299 0225</p>
-            </div>
-          </div>
-          <div class="info-item">
-            <div class="image-container">
-              <img
-                src="media/logo_d&M_contacto.png"
-                alt="Imagen sobre D&M"
-                style="width: 80%; border-radius: 10px"
-              />
-            </div>
-          </div>
-        </div>
-
-        <div class="contacto-form">
-          <form
-            id="contactForm"
-            action="https://formspree.io/f/mvggyelj"
-            method="POST"
-          >
-            <div class="input-group">
-              <input
-                type="text"
-                name="name"
-                placeholder="Nombre Completo"
-                required
-              />
-            </div>
-            <div class="input-group">
-              <input
-                type="text"
-                name="empresa"
-                placeholder="Empresa"
-                required
-              />
-            </div>
-            <div class="input-group">
-              <input
-                type="text"
-                name="cargo"
-                placeholder="Cargo en la Empresa"
-                required
-              />
-            </div>
-            <div class="input-group">
-              <input
-                type="email"
-                name="email"
-                placeholder="Correo Electrónico"
-                required
-              />
-            </div>
-            <div class="input-group">
-              <textarea
-                name="message"
-                placeholder="¿Cómo podemos ayudarte?"
-                rows="5"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="btn-enviar">Enviar Mensaje</button>
-            <p id="responseMessage" style="display: none"></p>
-          </form>
-          <div
-            id="mensaje-exito"
-            style="
-              display: none;
-              color: #a6bb53;
-              margin-top: 15px;
-              font-weight: bold;
-              text-align: center;
-            "
-          >
-            <i class="fas fa-check-circle"></i> ¡Mensaje enviado con éxito! Nos
-            contactaremos pronto.
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- Footer -->
     <footer class="pie-pagina">
       <div class="grupo-1">
@@ -467,7 +495,7 @@
         >
       </div>
     </footer>
-
+    <!-- POLITICS MODAL -->
     <div id="modalDataPolicy" class="modal">
       <div class="modal-content">
         <span class="close-btn" id="closeData">&times;</span>
@@ -600,7 +628,7 @@
         </div>
       </div>
     </div>
-
+    <!-- PRIVACY MODAL -->
     <div id="modalPrivacyNotice" class="modal">
       <div class="modal-content">
         <span class="close-btn" id="closePrivacy">&times;</span>

@@ -1,3 +1,33 @@
+//============================================
+//---------------- Navbar --------------------
+//============================================
+document.addEventListener("DOMContentLoaded", () => {
+  const mobileMenu = document.getElementById("mobile-menu");
+  const navList = document.querySelector(".nav-list");
+  const navLinks = document.querySelectorAll(".nav-list a");
+
+  // 1. Abrir y Cerrar menú al tocar las rayitas
+  if (mobileMenu) {
+    mobileMenu.addEventListener("click", () => {
+      navList.classList.toggle("active");
+      mobileMenu.classList.toggle("is-active");
+    });
+  }
+
+  // 2. Cerrar el menú automáticamente al tocar cualquier link
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (navList.classList.contains("active")) {
+        navList.classList.remove("active");
+        mobileMenu.classList.remove("is-active");
+      }
+    });
+  });
+});
+
+//============================================
+//----------- CARRUSEL INICIO ----------------
+//============================================
 let slideIndex = 1;
 let slideTimer;
 
@@ -49,8 +79,9 @@ function resetTimer() {
   autoSlides();
 }
 
-// ----------------- Traductor icono -------------------------------------//
-
+//============================================
+//-------------- TRADUCTOR -------------------
+//============================================
 function cambiarIdioma(lang) {
   // Buscamos el selector interno que crea Google
   const googleCombo = document.querySelector(".goog-te-combo");
@@ -95,7 +126,9 @@ function gestionarTraductor() {
 // Iniciar la lógica cuando la página cargue
 window.addEventListener("load", gestionarTraductor);
 
-// ---------------- Carrusel Empresas que confiaron ---------------------//
+//============================================
+//----------- CARRUSEL EMPRESAS --------------
+//============================================
 document.addEventListener("DOMContentLoaded", function () {
   function shuffleAndFillMarquee(containerId) {
     const marquee = document.getElementById(containerId);
@@ -124,7 +157,9 @@ document.addEventListener("DOMContentLoaded", function () {
   shuffleAndFillMarquee("marquee-content");
 });
 
-//------------ FORMULARIO CONTACTANOS ----------------------//
+//============================================
+//----------- FORMULARIO CONTACTO ------------
+//============================================
 const form = document.getElementById("contactForm");
 const responseMessage = document.getElementById("responseMessage");
 
@@ -176,7 +211,9 @@ form.addEventListener("submit", function (event) {
     });
 });
 
-// ---------------------- Footer ------------------------ //
+//============================================
+//----------- FOOTER COMPLETO ----------------
+//============================================
 // Función para los modales - Asegura que funcione en todas las páginas
 const iniciarModales = () => {
   const btnData = document.getElementById("openDataPolicy");

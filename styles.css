@@ -5,7 +5,7 @@ body {
   margin: 0;
   line-height: 1.5;
   padding-top: 150px; /* Debe ser igual a la altura del navbar */
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 .navbar {
@@ -226,18 +226,20 @@ body {
 /* --- Contenedor Principal Full Width --- */
 .main-fluid {
   width: 100%;
-  padding: 0;
-  margin: 0;
+  padding: 20px 0; /* Espacio arriba y abajo para que no pegue con el navbar */
 }
 
 .carousel-container {
   position: relative;
-  width: 100%;
-  height: 550px; /* Mantener tu altura preferida */
+  width: 100%; /* NO ocupa de lado a lado */
+  max-width: 1600px; /* Límite para pantallas muy grandes */
+  height: 400px; /* Altura más baja para que se vea más "estirado" */
+  margin: 0 auto; /* Centrado perfecto */
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 15px; /* Opcional: bordes redondeados para más elegancia */
 }
 
 .slide {
@@ -262,9 +264,9 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  padding: 15px;
-  color: rgba(0, 74, 153, 0.3); /* Azul muy suave para no distraer */
-  font-size: 40px;
+  padding: 10px;
+  color: rgba(0, 74, 153, 0.5);
+  font-size: 35px;
   text-decoration: none;
   transition: 0.3s;
   z-index: 10;
@@ -293,13 +295,12 @@ body {
 
 .dot {
   cursor: pointer;
-  height: 10px;
-  width: 10px;
+  height: 8px;
+  width: 8px;
   margin: 0 5px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   display: inline-block;
-  transition: 0.3s;
 }
 
 .dot.active {
@@ -357,89 +358,132 @@ body {
   }
 }
 
-/*========================================================== 
-------------------- SECCION QUE HACEMOS -------------------- 
-===========================================================*/
-/* Espaciado y contenedor principal quienes somos */
-.info-section {
-  font-family: "Century Gothic", sans-serif;
-  font-size: 22px;
-  line-height: 1.5;
-  padding: 60px 5%; /* Espacio interno */
-  margin-top: 20px; /* El ligero espacio con el carrusel */
-  background-color: #fff;
+/* ==========================================================================
+   SECCIÓN DE INNOVACIÓN 
+   ========================================================================== */
+
+/* 1. Contenedor General Centrado (El "Encajonado") */
+.wrapper-principal {
+  max-width: 1200px; /* Limita el ancho*/
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+  padding: 0 20px; /* Margen de seguridad para móviles */
+  box-sizing: border-box;
 }
 
-.info-container {
-  display: flex;
-  align-items: center; /* Centra verticalmente la imagen con el texto */
-  gap: 50px; /* Espacio entre la imagen y el texto */
-  max-width: 1200px;
-  margin: 0 auto;
+.seccion-inicio-proceso {
+  padding: 60px 0;
 }
 
-/* Estilo de la imagen */
-.info-image {
-  flex: 1; /* Ocupa el 50% */
+.seccion-inicio-proceso h2 {
+  text-align: center;
+  font-size: 50px;
+  color: #4a6ea6;
+  margin-bottom: 10px;
+  padding: 0 20px;
 }
 
-.info-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px; /* Bordes redondeados modernos */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-/* Estilo del texto */
-.info-text {
-  flex: 1; /* Ocupa el otro 50% */
-}
-
-.info-text h2 {
-  font-size: 2.5rem;
-  color: #4a6ea6; /* Azul corporativo */
-  margin-bottom: 20px;
-  position: relative;
-}
-
-/* Una pequeña línea debajo del título para estilo */
-.info-text h2::after {
-  content: "";
-  display: block;
+.separator-line {
   width: 60px;
   height: 4px;
-  background-color: #ff8800; /* Naranja de tu marca */
-  margin-top: 10px;
+  background-color: #dbb557;
+  margin: 0 auto 40px auto;
 }
 
-.info-text p {
-  font-size: 1.2rem;
-  text-align: justify;
+/* 2. Estructura de Rejilla (Grid) */
+.grid-layout-caracteristicas {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales en PC */
+  gap: 50px;
+  align-items: center;
+}
+
+/* 3. Contenedor de Imagen o Video */
+.img-content-caracteristicas {
+  width: 100%;
+}
+
+.video-container-suite img,
+.video-container-suite video {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+/* 4. Contenido de Texto e Iconos */
+.text-content-caracteristicas {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.introduccion-suite {
+  font-size: 23px;
   line-height: 1.6;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Items con Checkbox */
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.feature-item i {
+  color: #4a6ea6; /* Color del icono */
+  font-size: 22px;
+  margin-top: 3px;
+}
+
+.feature-item p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.5;
   color: #555;
-  margin-bottom: 15px;
 }
 
-/* RESPONSIVO: Para celulares - información */
-@media (max-width: 768px) {
-  .info-container {
-    flex-direction: column; /* Apila imagen arriba y texto abajo */
-    text-align: center;
+/* ==========================================================================
+   ADAPTACIÓN PARA MÓVIL (Android & Apple)
+*/
+@media (max-width: 850px) {
+  .grid-layout-caracteristicas {
+    grid-template-columns: 1fr; /* Cambia a una sola columna */
     gap: 30px;
+    text-align: center;
   }
 
-  .info-text h2::after {
-    margin: 10px auto; /* Centra la línea del título en móvil */
+  .seccion-inicio-proceso h2 {
+    font-size: 26px;
+  }
+
+  .feature-item {
+    text-align: left; /* Mantiene los beneficios alineados a la izquierda para leer mejor */
+  }
+
+  .img-content-caracteristicas {
+    order: -1; /* Asegura que la imagen/video aparezca arriba del texto */
   }
 }
 
+/* ==========================================================================
+   SECCIÓN DE VENTAJAS
+   ========================================================================== */
 /* --- Sección Ventajas --- */
 .features-section {
   font-family: "Century Gothic", sans-serif;
   font-size: 22px;
   line-height: 1.5;
   padding: 60px 5%;
-  background-color: whitesmoke;
+}
+
+.features-section h2 {
+  text-align: center;
+  font-size: 50px;
+  color: #4a6ea6;
+  margin-bottom: 10px;
+  padding: 0 20px;
 }
 
 .features-container {
@@ -523,10 +567,12 @@ body {
   }
 }
 
+/* ==========================================================================
+   SECCIÓN DE PRODUCTOS
+   ========================================================================== */
 /* --- Contenedor Principal de Productos ( sección productos ) --- */
 .products-section {
-  padding: 80px 5%;
-  background-color: #ffffff;
+  padding: 10px 5%;
 }
 
 .products-container {
@@ -540,7 +586,7 @@ body {
 
 .products-header {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #4a6ea6;
 }
 
@@ -655,11 +701,79 @@ body {
   }
 }
 
-/* ------------- CONTACTENOS --------------- */
+/*=================================================================== 
+--------------------- CARRUSEL CLIENTS QUE CONFIARON ---------------- 
+=====================================================================*/
+.wrapper-principal {
+  width: 100%; /* Ocupa el 100% del ancho de la pantalla */
+  max-width: 1400px; /* Permite que se ensanche hasta 1400px */
+  margin: 0 auto; /* Mantiene el contenido centrado */
+  padding: 0 20px; /* Espacio interno para que no toque los bordes en tablets */
+}
+
+.seccion-principal h2 {
+  text-align: center;
+  font-size: 50px;
+  color: #4a6ea6;
+  margin-bottom: 10px;
+  padding: 0 25px;
+}
+
+.carousel-marquee {
+  overflow: hidden;
+  padding: 20px 0;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 25s linear infinite; /* 25s es una velocidad cómoda */
+}
+
+.logo-item {
+  display: inline-block;
+  /* CLAVE: Dimensiones fijas para el contenedor del logo */
+  width: 180px;
+  height: 100px;
+  margin: 0 40px;
+  vertical-align: middle;
+}
+
+.logo-item img {
+  width: 100%;
+  height: 100%;
+  /* CLAVE: 'contain' evita que se estiren y los centra en el marco */
+  object-fit: contain;
+  transition: all 0.4s ease;
+}
+
+.logo-item:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1); /* Efecto de acercamiento suave */
+}
+
+/* Animación fluida */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  } /* Se desplaza la mitad exacta */
+}
+
+/*=================================================================== 
+------------------------ SECCIÓN CONTACTENOS ------------------------ 
+=====================================================================*/
 /* --- Sección Contacto --- */
 .contacto-section {
   padding: 80px 10%;
-  background-color: #ffffff;
 }
 .contacto-section h2 {
   color: #004a99;
@@ -798,73 +912,6 @@ body {
   margin-top: 8px;
   font-size: 14px;
   text-align: center;
-}
-
-/*=================================================================== 
---------------------- CARRUSEL CLIENTS QUE CONFIARON ---------------- 
-=====================================================================*/
-.wrapper-principal {
-  max-width: 1200px; /* Ancho máximo para que no ocupe todo el monitor */
-  margin: 0 auto; /* Centra el bloque */
-  padding: 0 20px;
-}
-
-.carousel-marquee {
-  overflow: hidden;
-  padding: 40px 0;
-  white-space: nowrap;
-  width: 100%;
-  position: relative;
-
-}
-
-.carousel-header h2 {
-  text-align: center;
-  font-size: 2.8rem;
-  color: #4a6ea6;
-}
-
-.marquee-content {
-  display: inline-block;
-  white-space: nowrap;
-  animation: marquee 35s linear infinite;
-}
-
-.logo-item {
-  display: inline-block;
-  width: 180px;
-  height: 80px;
-  margin: 0 30px;
-  vertical-align: middle;
-  overflow: hidden; /* Importante para que el zoom no se salga */
-}
-
-.logo-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition: transform 0.4s ease;
-}
-
-/* EFECTO ZOOM SOLAMENTE AL LOGO */
-.logo-item:hover img {
-  transform: scale(1.25);
-}
-
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-33.333%);
-  }
-}
-
-@media (max-width: 768px) {
-  .logo-item {
-    width: 120px;
-    margin: 0 15px;
-  }
 }
 
 /*=================================================================== 
@@ -1029,7 +1076,9 @@ figure img {
   color: #28a745; /* Color verde en el hover */
 }
 
-/* --------- CONTENIDO DE POLITICA DE TRATAMIENTO DE DATOS -------- */
+/*============================================================== 
+--------- CONTENIDO DE POLITICA DE TRATAMIENTO DE DATOS -------- 
+================================================================*/
 /* --- Contenido Legal Elegante --- */
 .legal-content {
   font-size: 16px;
@@ -1154,7 +1203,9 @@ figure img {
   }
 }
 
-/* --------- CONTENIDO DE AVISO DE PRIVACIDAD -------- */
+/*================================================= 
+--------- CONTENIDO DE AVISO DE PRIVACIDAD -------- 
+===================================================*/
 .technical-box {
   background-color: #f9f9f9;
   padding: 15px;
@@ -1178,7 +1229,9 @@ figure img {
   font-size: 0.85rem;
 }
 
-/* ---------------- ESTILOS GLOPEM.HTML ---------------- */
+/*=================================================== 
+---------------- ESTILOS GLOPEM.HTML ---------------- 
+=====================================================*/
 /* --- Banner Hero GLOPEM Limpio --- */
 .hero-glopem-bg {
   background-image: url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop");
