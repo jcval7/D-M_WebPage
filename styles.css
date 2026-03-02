@@ -570,7 +570,7 @@ body {
 /* ==========================================================================
    SECCIÓN DE PRODUCTOS
    ========================================================================== */
-/* --- Contenedor Principal de Productos ( sección productos ) --- */
+/* --- Contenedor Principal de Productos --- */
 .products-section {
   padding: 10px 5%;
 }
@@ -581,7 +581,7 @@ body {
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
-  flex-wrap: wrap; /* Soporte para móvil */
+  flex-wrap: wrap; 
 }
 
 .products-header {
@@ -590,24 +590,42 @@ body {
   color: #4a6ea6;
 }
 
-/* --- Estructura de la Tarjeta Productos- Bicolor --- */
+/* --- Enlace que envuelve la tarjeta --- */
+.product-link-wrapper {
+    text-decoration: none;
+    color: inherit;
+    display: flex; /* Cambiado a flex para controlar el estiramiento */
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* --- Estructura de la Tarjeta Bicolor --- */
 .product-card {
   background: #ffffff;
   border-radius: 20px;
   flex: 1;
   min-width: 320px;
   max-width: 480px;
-  overflow: hidden; /* Importante para que los fondos no se salgan de las esquinas redondeadas */
+  overflow: hidden; 
   display: flex;
   flex-direction: column;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid #eaeaea;
-  border-bottom: 8px solid #a6bb53; /* Tu borde verde al final */
+  border-bottom: 8px solid #a6bb53; 
 }
 
+/* Efectos al pasar el mouse por la tarjeta */
 .product-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Efecto zoom al logo */
+.product-card:hover .product-logo img {
+    transform: scale(1.1);
 }
 
 /* Parte Superior (Blanca) */
@@ -617,19 +635,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #eeeeee; /* Línea fina separadora */
+  border-bottom: 1px solid #eeeeee;
 }
 
 .product-logo img {
   height: 80px;
   width: auto;
+  transition: transform 0.3s ease; /* Transición para el zoom */
 }
 
-/* Parte Inferior (Color Diferente) */
+/* Parte Inferior (Azul) */
 .card-bottom {
-  background-color: #4a6ea6; /* Color suave para la lista (puedes usar #eef2f7) */
+  background-color: #4a6ea6; 
   padding: 30px 40px 40px 40px;
-  flex-grow: 1;
+  flex-grow: 1; /* CLAVE: Rellena el espacio y quita la franja blanca */
   display: flex;
   flex-direction: column;
 }
@@ -641,7 +660,7 @@ body {
   text-align: center;
 }
 
-/* --- Lista con Chulos en Círculos --- */
+/* --- Lista con Chulos --- */
 .product-list {
   list-style: none;
   padding: 0;
@@ -649,7 +668,7 @@ body {
 }
 
 .product-list li {
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* Ajustado para mejor legibilidad */
   color: white;
   margin-bottom: 15px;
   display: flex;
@@ -661,7 +680,7 @@ body {
   content: "\f00c";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  color: white;
+  color: white; /* El chulo toma el color del fondo */
   background-color: #a6bb53;
   width: 24px;
   height: 24px;
@@ -671,23 +690,6 @@ body {
   justify-content: center;
   font-size: 0.7rem;
   flex-shrink: 0;
-}
-
-/* Botón */
-.btn-product {
-  text-decoration: none;
-  background-color: #004a99;
-  color: white;
-  padding: 12px;
-  border-radius: 8px;
-  text-align: center;
-  font-weight: 600;
-  margin-top: auto;
-  transition: 0.3s;
-}
-
-.btn-product:hover {
-  background-color: #003366;
 }
 
 /* --- Adaptación Móvil --- */
@@ -725,14 +727,14 @@ body {
   white-space: nowrap;
   width: 100%;
   position: relative;
-  border-top: 1px solid #f0f0f0;
-  border-bottom: 1px solid #f0f0f0;
+  /* border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0; */
 }
 
 .marquee-content {
   display: inline-block;
   white-space: nowrap;
-  animation: marquee 25s linear infinite; /* 25s es una velocidad cómoda */
+  animation: marquee 30s linear infinite; /* 30s es una velocidad cómoda */
 }
 
 .logo-item {
@@ -1467,19 +1469,43 @@ figure img {
   position: relative;
   padding-left: 25px;
   color: #444;
+  font-size: 1rem; /* Ajustado para legibilidad */
 }
 
 .clean-list li::before {
   content: "\f00c"; /* Check de FontAwesome */
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 5 Free", "Font Awesome 6 Free";
   font-weight: 900;
   position: absolute;
   left: 0;
   color: #28a745;
 }
 
-/* Responsivo para móviles */
+/* --- Responsivo para móviles (AJUSTADO) --- */
 @media (max-width: 768px) {
+  /* Cambio de horizontal a vertical en los módulos */
+  .module-card-row {
+    flex-direction: column; 
+    border-left: none;
+    border-top: 5px solid #dbb557; /* El borde pasa de la izquierda a la parte superior */
+  }
+
+  .module-info-side {
+    flex: none; /* Desactiva el ancho fijo de 250px */
+    width: 100%;
+    padding: 20px;
+  }
+
+  .module-info-side img {
+    width: 80px; /* Reducción de logo para ahorrar espacio vertical */
+  }
+
+  .module-desc-side {
+    padding: 20px;
+    width: 100%;
+  }
+
+  /* Ajustes de Banner (tus estilos previos) */
   .banner-content {
     flex-direction: column;
     text-align: center;
@@ -1906,11 +1932,45 @@ figure img {
 
 /* Ajuste Responsivo */
 @media (max-width: 768px) {
-  .hero-clientes-bg .hero-text h1 {
-    font-size: 45px;
+  .hero-clientes-bg {
+    background-attachment: scroll; /* Evita tirones visuales en iOS/Android */
+    min-height: auto;
+    padding: 50px 0;
   }
+
+  .hero-clientes-bg .hero-overlay {
+    /* Cambio a degradado vertical para que el texto resalte sobre la imagen */
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.9) 50%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+    flex-direction: column; /* Apila texto e icono verticalmente */
+    text-align: center;
+    padding: 40px 20px;
+    min-height: auto;
+    justify-content: center;
+  }
+
+  .hero-clientes-bg .hero-text h1 {
+    font-size: 40px; /* Tamaño adaptado para móviles */
+    line-height: 1.2;
+  }
+
+  .hero-clientes-bg .hero-text p {
+    font-size: 18px; /* Texto legible en mano */
+    margin: 20px auto;
+    max-width: 100%;
+  }
+
   .hero-clientes-bg .hero-icon-box {
-    display: none;
+    margin-top: 30px;
+    display: block; /* Lo mantenemos visible pero más pequeño */
+  }
+
+  .hero-clientes-bg .hero-icon-box i {
+    font-size: 80px; /* Reducción proporcional del icono */
+    opacity: 0.8;
   }
 }
 
