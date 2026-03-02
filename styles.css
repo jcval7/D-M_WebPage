@@ -26,7 +26,7 @@ body {
 
 /* --- Logo --- */
 .logo img {
-  height: 130px; /* Controla el tamaño del logo */
+  height: 170px; /* Controla el tamaño del logo */
   width: auto;
   display: block;
   margin-bottom: 15px; /* Espacio entre el logo y la franja de abajo */
